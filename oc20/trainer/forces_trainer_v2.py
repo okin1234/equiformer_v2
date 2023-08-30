@@ -315,6 +315,10 @@ class ForcesTrainerV2(BaseTrainerV2):
         # to prevent inconsistencies due to different batch size in checkpoint.
         start_epoch = self.step // len(self.train_loader)
 
+        # Load checkpoint if provided.
+        if self.config['optim'].get('checkpoint_path', False):
+            self.load_checkpoint(self.config['optim'].get('checkpoint_path'))
+
         for epoch_int in range(
             start_epoch, self.config["optim"]["max_epochs"]
         ):

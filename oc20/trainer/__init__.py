@@ -9,7 +9,8 @@ __all__ = [
     "EnergyTrainerV2",
     "ComputeStatsTask", 
     "MyRelaxationTask",
-    "LmdbDatasetV2"
+    "LmdbDatasetV2",
+    "DaconDataset"
 ]
 
 #from .base_trainer import BaseTrainerV2
@@ -22,3 +23,4 @@ from .task_compute_stats import ComputeStatsTask
 from .task_relaxation import MyRelaxationTask
 
 from .lmdb_dataset import LmdbDatasetV2
+from .dacon_dataset import DaconDataset

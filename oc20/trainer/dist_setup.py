@@ -88,6 +88,7 @@ def setup(config):
             init_method="env://",
         )
     else:
+        print(f"=================== \n {config['local_rank']} \n ===================")
         dist.init_process_group(
             backend=config["distributed_backend"], init_method="env://", 
             rank=config['local_rank'],
